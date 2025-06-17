@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lunix Terapia</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>LUNIX</h1>
+      <nav>
+        <a href="#terapeuta">Terapeuta</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#tipos">Tipos de Terapia</a>
+        <a href="#duvidas">Dúvidas</a>
+        <a href="#avaliacoes">Avaliações</a>
+        <a href="#contato">Contato</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h2>A luz da sua nova jornada</h2>
+    <p>Transforme sua vida com apoio terapêutico e autoconhecimento</p>
+    <a href="#contato" class="btn">Fale com a Terapeuta</a>
+  </section>
+
+  <section class="sobre" id="terapeuta">
+    <div class="content">
+      <h2>Sobre a Terapeuta</h2>
+      <p>Elzi, natural de Salvador, Bahia, teve uma infância repleta de experiências significativas. Crescendo em meio à natureza, sua formação foi marcada por momentos de lazer em um sítio familiar, onde aprendeu a nadar e desenvolveu um forte vínculo com o ambiente natural. [...]</p>
+    </div>
+  </section>
+
+  <section class="cards-section" id="beneficios">
+    <h2>Benefícios da Terapia</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Autoconhecimento</h3>
+        <p>Compreenda melhor suas emoções e comportamentos.</p>
+      </div>
+      <div class="card">
+        <h3>Redução da Ansiedade</h3>
+        <p>Aprenda técnicas para lidar com estresse e angústias.</p>
+      </div>
+      <div class="card">
+        <h3>Relacionamentos</h3>
+        <p>Melhore sua comunicação e empatia com os outros.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cards-section" id="tipos">
+    <h2>Tipos de Terapia</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Terapia Cognitivo-Comportamental</h3>
+        <p>Mude padrões de pensamento e comportamento negativos.</p>
+      </div>
+      <div class="card">
+        <h3>Terapia Humanista</h3>
+        <p>Trabalhe sua autenticidade e autoaceitação.</p>
+      </div>
+      <div class="card">
+        <h3>Mindfulness</h3>
+        <p>Práticas para viver o presente com equilíbrio emocional.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section" id="duvidas">
+    <h1>Perguntas Frequentes</h1>
+
+    <div class="faq">
+      <div class="question">Como funciona a terapia?</div>
+      <div class="answer">A terapia é um processo de autoconhecimento e desenvolvimento emocional guiado por um profissional qualificado.</div>
+    </div>
+
+    <div class="faq">
+      <div class="question">Preciso ter um problema grave para fazer terapia?</div>
+      <div class="answer">Não! A terapia é para qualquer pessoa que deseja se conhecer melhor, lidar com questões emocionais, melhorar relacionamentos ou desenvolver habilidades pessoais.</div>
+    </div>
+
+    <div class="faq">
+      <div class="question">As sessões são sigilosas?</div>
+      <div class="answer">Sim. Tudo o que é discutido em sessão é protegido pelo sigilo profissional, garantindo sua privacidade e segurança.</div>
+    </div>
+
+    <div class="faq">
+      <div class="question">Com que frequência devo fazer terapia?</div>
+      <div class="answer">A frequência mais comum é semanal, mas pode variar conforme as necessidades e disponibilidade do paciente.</div>
+    </div>
+  </section>
+
+
+  <section class="depoimentos" id="avaliacoes">
+    <h2>O que dizem sobre a Elzi</h2>
+    <blockquote>
+      "A Elzi é uma profissional incrível. Me ajudou a enxergar coisas que eu nunca havia percebido sobre mim mesma." <br />
+      — <strong>Ana C.</strong>
+    </blockquote>
+    <blockquote>
+      "Sempre me sinto acolhido nas sessões com a Elzi. Ela é atenta, sensível e extremamente competente." <br />
+      — <strong>João M.</strong>
+    </blockquote>
+    <blockquote>
+      "A forma como a Elzi conduz a terapia é leve, mas profunda. Sinto que evoluí muito desde que começamos." <br />
+      — <strong>Larissa T.</strong>
+    </blockquote>
+    <blockquote>
+      "Recomendo a Elzi de olhos fechados. Ela me ajudou num momento muito difícil com empatia e profissionalismo." <br />
+      — <strong>Pedro R.</strong>
+    </blockquote>
+  </section>
+
+  <footer id="contato">
+    <p>© 2025 Lunix Terapia. Todos os direitos reservados.</p>
+    <p>Email: contato@lunixterapia.com | (11) 90000-0000</p>
+  </footer>
+
+  <script>
+    const faqs = document.querySelectorAll(".faq");
+    faqs.forEach(faq => {
+      faq.querySelector(".question").addEventListener("click", () => {
+        faq.classList.toggle("active");
+      });
+    });
+  </script>
+</body>
+</html>

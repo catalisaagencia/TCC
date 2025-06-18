@@ -189,7 +189,8 @@ footer {
 .faq-section {
   max-width: 800px;
   margin: 60px auto;
-  padding: 0 20px;
+ padding: 135px 90px;
+   scroll-behavior: smooth;
 }
 
 .faq-section h1 {
@@ -205,6 +206,7 @@ footer {
   border-radius: 12px;
   margin-bottom: 15px;
   padding: 20px;
+  width: 600px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
   transition: all 0.3s ease;
   cursor: pointer;

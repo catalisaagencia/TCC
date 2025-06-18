@@ -4,9 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lunix Terapia</title>
-  <link rel="stylesheet" href="style.css" />
-   <link rel="icon" type="image" href="icon.png">
-  
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image" href="icon.png">
 </head>
 <body>
   <header>
@@ -129,6 +128,43 @@
         faq.classList.toggle("active");
       });
     });
+
+
+
+
+     // --- NOVO CÓDIGO PARA ROLAGEM COM GSAP ---
+
+        // Registra o plugin ScrollTo para que ele possa ser usado
+        gsap.registerPlugin(ScrollToPlugin);
+
+        const scrollLinks = document.querySelectorAll('a[href^="#"]');
+        const headerHeight = 80; // Ajuste para a altura do seu cabeçalho
+
+        scrollLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Impede o comportamento de rolagem padrão do navegador
+
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+
+                if (targetElement) {
+                    // Calcula a posição de destino com o offset do cabeçalho
+                    const finalScrollPosition = targetElement.getBoundingClientRect().top + window.scrollY - headerHeight;
+
+                    // Anima a rolagem usando GSAP
+                    gsap.to(window, {
+                        duration: 1.5, // Duração da animação em segundos (ex: 1.5s para mais lento)
+                        scrollTo: {
+                            y: finalScrollPosition,
+                            autoKill: false // Mantenha isso para evitar interrupções inesperadas
+                        },
+                        ease: "power2.out" // Tipo de easing (ex: mais suave no final)
+                        // Experimente outros easings como "power1.inOut", "expo.out", etc.
+                        // Veja a documentação do GSAP para mais opções de easing.
+                    });
+                }
+            });
+        });
   </script>
 </body>
 </html>
